@@ -41,7 +41,7 @@ async function erase(){
 // put prompt behind button
 
 function addText(){
-    var name=prompt("i love you; whats ur name");
+    var name=prompt("What would you like to see written?");
     var newElement = document.createElement("SPAN");
     var text = document.createTextNode(name);
     newElement.className="item";
