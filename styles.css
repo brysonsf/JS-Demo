@@ -9,6 +9,7 @@
     visibility: hidden;
     display: none;
 }
+/* written text */
 .wrapper > div {
     min-height: 20px;
     text-transform: uppercase;
@@ -19,13 +20,13 @@
     font-weight: bold;
     color: orange;
 }
-.wrapper > div:after {
+/* styles underscore ;) */
+.wrapper > div::after {
     content: "";
     width: 10px;
     height: 4px;
     display: block;
     background: black;
-    color: orange;
     margin-bottom: 4px;
     margin-left: 2px;
     animation-duration: 350ms;

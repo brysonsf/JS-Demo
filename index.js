@@ -3,7 +3,7 @@ let wrapper
 const sleep = (ms) => new Promise ( resolve => setTimeout(resolve, ms))
 
 
-// writes string console logs once per typing demo iteration
+// can write any text into a container with the cute vibes
 async function writingString(stringTarget, container){
     wrapper = document.querySelector('[' + container + ']')
     const stringsContainer = document.getElementsByClassName(stringTarget)
@@ -34,8 +34,27 @@ async function erase(){
     while(wrapper.textContent.length){
         const timeout=100
         await sleep(timeout)
-        wrapper.textContent=wrapper.textContent.substring(0, wrapper.textContent.length-2)
+        //erase speed set by substring length reduction
+        wrapper.textContent=wrapper.textContent.substring(0, wrapper.textContent.length-1)
     }
 };
+// put prompt behind button
+
+function addText(){
+    var name=prompt("i love you; whats ur name");
+    var newElement = document.createElement("SPAN");
+    var text = document.createTextNode(name);
+    newElement.className="item";
+    newElement.appendChild(text);
+    document.querySelector(".wrapper").appendChild(newElement);
+};
+
+// create function for text entry and add element
+/*
+    - create array of items
+        - halt async
+    - append additional elements
+    - restart
+*/
 
 writingString('item', 'data-text');
